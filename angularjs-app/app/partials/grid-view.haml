@@ -1,0 +1,38 @@
+%search-box
+
+.row
+  .col-md-12.col-sm-12.col-xs-12
+    .row
+      %ul.grid-view
+        %li.col-md-2.col-sm-4.col-xs-6
+          .thumbnail.dog-add
+            .no-image
+              %span.glyphicon.glyphicon-plus-sign
+            .caption
+              Add a New Dog
+        %li.col-md-2.col-sm-4.col-xs-6.draggable{"ng-repeat" => "dog in dogs | filter:query"}
+          .thumbnail
+            %img{"ng-src" => "{{dog.image}}"}
+            .caption
+              .dog-name {{dog.name}}
+              //%button.btn.btn-xs.btn-primary{"data-target" => ".detail-modal-{{$index}}", "data-toggle" => "modal"}
+              //  more info
+          .modal.fade{:class => "detail-modal-{{$index}}"}
+            .modal-dialog.modal-sm
+              .modal-content
+                .modal-body
+                  %button.close{"data-dismiss" => "modal"}
+                    %span &times;
+                  .media
+                    .media-left
+                      %img.img-rounded{"ng-src" => "{{dog.image}}"}
+                    .media-body
+                      .row
+                        .col-md-12.col-xs-12.col-sm-12
+                          %h5 Dog Name
+                          {{dog.name}}
+                      .row.m-m-top
+                        .col-md-12.col-xs-12.col-sm-12
+                          %h5 Owner/City
+                          {{dog.owner}} / {{dog.city}}
+                          

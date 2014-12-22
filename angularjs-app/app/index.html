@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+  <header class="navbar navbar-default header navbar-fixed-top" role="navigation">
+    <div class="container navbar-container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/?ref=header">
+          <svg width="98" height="42">
+            <image xlink:href="//dpg482mbzk9j5.cloudfront.net/new_design/images/logo.eaa24b7669c3.svg" src="//dpg482mbzk9j5.cloudfront.net/new_design/images/logo@2x.fffb6e89097f.png" width="98" height="42" alt="Rover.com" itemprop="logo"></image>
+          </svg>
+        </a>
+      </div>
+
+          
+      <div class="list-nav pull-right">
+        <ul>
+          <li><a href="#/grid-view"><span class="glyphicon glyphicon-th p-xs-right"></span>Grid</a></li>
+          <li><a href="#/list-view"><span class="glyphicon glyphicon-th-list p-xs-right"></span>List</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div ng-view class="container content"></div>
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

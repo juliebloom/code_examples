@@ -1,0 +1,96 @@
+$green: #89cc54
+$border-green: #68bb2f
+$light-gray: #cbcbcb
+$background-color: #eeeef0
+$dark-gray: #333
+
+@import spacing
+
+body
+  margin: 0 auto
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size: 14px
+  color: #333
+  background: $background-color
+
+header
+  margin-bottom: 45px
+  .navbar-brand 
+    padding: 5px 15px
+
+.container
+  margin: 0 2%
+
+.content
+  margin-top: 80px
+
+ul
+  padding: 0
+  li
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.btn-primary
+  background-color: $green
+  border-color: $border-green
+  &:hover, &:focus
+    background-color: darken($green,20%)
+    border-color: darken($green,20%)
+
+.input-group-addon
+  background-color: $green
+  color: #fff
+
+.modal-body
+  padding: 10px 15px
+
+.grid-view, .list-view
+  h5
+    margin: 0
+
+.navbar-header
+  float: left
+
+.list-nav
+  margin-top: 10px
+  ul
+    li
+      margin-right: 10px
+      display: inline-block
+      a, a:link, a:visited
+        color: #666
+.grid-view
+  li
+    display: inline-block
+    .thumbnail
+      padding: 0
+      border-radius: 2px
+      text-align: center
+      min-height: 215px
+      border: 1px solid transparent
+      box-shadow: 0 2px $light-gray
+      .caption
+        margin-bottom: 8px
+      .no-image
+        min-height: 165px
+        background-color: $dark-gray
+        border-top-left-radius: 2px
+        border-top-right-radius: 2px
+      &.dog-add
+        .glyphicon
+          color: $green
+          font-size: 60px
+          padding-top: 50px
+        .caption
+          background-color: #fff
+      img
+        height: auto
+        min-height: 165px
+        width: 100%
+        border-top-left-radius: 2px
+        border-top-right-radius: 2px
+      .dog-name
+        font-size: 16px
+        font-weight: bold
+

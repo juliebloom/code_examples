@@ -1,0 +1,28 @@
+<search-box></search-box>
+<div class='row'>
+  <div class='col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-12'>
+    <ul class='list-view'>
+      <li class='well' ng-repeat='dog in dogs | filter:query'>
+        <div class='media'>
+          <div class='media-left'>
+            <img class='img-rounded' ng-src='{{dog.image}}'>
+          </div>
+          <div class='media-body'>
+            <div class='row'>
+              <div class='col-md-12 col-xs-12 col-sm-12'>
+                <h5>Dog Name</h5>
+                {{dog.name}}
+              </div>
+            </div>
+            <div class='row m-m-top'>
+              <div class='col-md-12 col-xs-12 col-sm-12'>
+                <h5>Owner/City</h5>
+                {{dog.owner}} / {{dog.city}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

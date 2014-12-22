@@ -1,0 +1,19 @@
+%search-box
+
+.row
+  .col-md-offset-1.col-md-10.col-sm-offset-1.col-sm-10.col-xs-12
+    %ul.list-view
+      %li.well{"ng-repeat" => "dog in dogs | filter:query"}
+        .media
+          .media-left
+            %img.img-rounded{"ng-src" => "{{dog.image}}"}
+          .media-body
+            .row
+              .col-md-12.col-xs-12.col-sm-12
+                %h5 Dog Name
+                {{dog.name}}
+            .row.m-m-top
+              .col-md-12.col-xs-12.col-sm-12
+                %h5 Owner/City
+                {{dog.owner}} / {{dog.city}}
+                
