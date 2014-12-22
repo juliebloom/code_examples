@@ -1,0 +1,52 @@
+head
+body
+  header.col-md-offset-2
+    h1.m-l-bottom You Got Things To Do!
+  .row.content
+    .col-md-offset-2.col-md-8
+      .modal.fade.add-task
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss="modal") &times;
+              h4 Add a New Task
+            .modal-body
+              form.form-horizontal.new-task
+                .form-group
+                  label.m-m-left New task:
+                  .col-md-12
+                    input.form-control(type="text",name="text")
+      ul.nav.nav-pills.m-l-bottom(role="tablist")
+        li.active(role="presentation")
+          a To do
+            span.badge 
+              {{tasks.count}}
+        li(role="presentation")
+          a Done!
+            span.badge
+              {{doneTasks.count}}
+        li.pull-right
+          a.btn.btn-primary(data-toggle="modal",data-target=".add-task")
+            |Add New Task 
+            span.glyphicon.glyphicon-plus
+      ul.to-do-list
+        li.row.header
+          .col-md-9
+            |Task
+          .col-md-2.text-center
+            |Date Added
+          .col-md-1.text-center
+            |Delete
+        each tasks
+          +task
+
+template(name="task")
+  li.row
+    .col-md-9 
+      .checkbox
+        label
+          input.toggle-checked(type="checkbox",checked="{{checked}}")
+          span.p-s-top(class="{{#if checked}}checked{{/if}}") {{text}}
+    .col-md-2.text-center.m-s-top {{prettyDate}}
+    .col-md-1.text-center.m-s-top
+      button.delete &times;

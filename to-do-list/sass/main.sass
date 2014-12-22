@@ -1,0 +1,41 @@
+@import '.meteor/local/build/programs/server/assets/packages/reywood_bootstrap3-sass/bootstrap'
+@import spacing
+
+body
+  margin: 0 auto
+  font-size: 14px
+  color: #333
+
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+.nav > li > a.btn-primary:hover
+  background-color: darken(#428bca,10%)
+
+.to-do-list 
+  border: 1px solid #cbcbcb
+  border-radius: 8px
+  > li
+    margin: 0 
+    padding: 8px 15px
+    border-bottom: 1px solid #cbcbcb
+    &.header
+      background-color: #428bca
+      color: #fff
+      font-weight: bold
+    &:first-child
+      border-top-right-radius: 8px
+      border-top-left-radius: 8px
+    &:last-child
+      border-bottom: 1px solid transparent
+      border-bottom-left-radius: 8px
+      border-bottom-right-radius: 8px
+    &:hover
+      background-color: #cbcbcb
+      &:first-child
+        background-color: #428bca
+    .checked
+      text-decoration: line-through
+
