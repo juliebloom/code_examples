@@ -43,6 +43,9 @@ if (Meteor.isClient) {
     },
     doneTasks: function() {
       return Tasks.find({checked: true});
+    },
+    toDoTasks: function() {
+      return Tasks.find({checked: false});
     }
   });
 }

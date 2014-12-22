@@ -18,9 +18,13 @@ body
                     input.form-control(type="text",name="text")
       ul.nav.nav-pills.m-l-bottom(role="tablist")
         li.active(role="presentation")
-          a To do
+          a All Tasks
             span.badge 
               {{tasks.count}}
+        li(role="presentation")
+          a To do
+            span.badge 
+              {{toDoTasks.count}}
         li(role="presentation")
           a Done!
             span.badge
